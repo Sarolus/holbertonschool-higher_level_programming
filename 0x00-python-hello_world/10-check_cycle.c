@@ -16,6 +16,7 @@ int check_cycle(listint_t *list)
 		tmp = tmp->next;
 
 		if (head == tmp)
+		{
 			head = list;
 			while (head != tmp)
 			{
@@ -23,6 +24,7 @@ int check_cycle(listint_t *list)
 				tmp = tmp->next;
 			}
 			return (1);
+		}
 	}
 
 	return (0);
