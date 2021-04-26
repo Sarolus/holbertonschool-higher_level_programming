@@ -10,16 +10,19 @@ int check_cycle(listint_t *list)
 	listint_t *head = list;
 	listint_t *tmp = list;
 
-	if (!list && !list->next)
+	while (!tmp && !head->next && !head->next->next)
 	{
-		while (!tmp && !head && !head->next)
-		{
-			head = head->next;
-			tmp = tmp->next->next;
+		head = head->next->next;
+		tmp = tmp->next;
 
-			if (head == tmp)
-				return (1);
-		}
+		if (head == tmp)
+			head = list;
+			while (head != tmp)
+			{
+				head = head->next;
+				tmp = tmp->next;
+			}
+			return (1);
 	}
 
 	return (0);
