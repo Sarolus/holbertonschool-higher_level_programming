@@ -7,8 +7,9 @@
  */
 int check_cycle(listint_t *list)
 {
-	listint_t *head = list;
-	listint_t *tmp = list;
+	listint_t *head, *tmp;
+
+	head = tmp = list;
 
 	if (list == NULL)
 		return (0);
