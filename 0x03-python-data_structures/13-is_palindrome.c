@@ -8,13 +8,13 @@
 int is_palindrome(listint_t **head)
 {
 	listint_t *current;
-	int i = 0, j, *array;
+	int i = 0, j, array[100];
 
 	if (*head == NULL)
 		return (1);
 
 	current = *head;
-	while (i < current)
+	while (current)
 	{
 		array[i] = current->n;
 		current = current->next;
