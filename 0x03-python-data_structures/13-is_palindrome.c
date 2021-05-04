@@ -26,7 +26,7 @@ int _ListLen(listint_t *head)
 int is_palindrome(listint_t **head)
 {
 	listint_t *current;
-	int i = 0, j, *array, listlen;
+	int i = 0, j, *array, limit, listlen;
 
 	if (*head == NULL || head == NULL)
 		return (1);
@@ -42,7 +42,9 @@ int is_palindrome(listint_t **head)
 		i++;
 	}
 
-	for (j = 0; j < i / 2; j++)
+	limit = (i % 2 == 0) ? i / 2 : (i + 1) / 2;
+
+	for (j = 0; j < limit; j++)
 	{
 		if (array[j] != array[i - 1 - j])
 		{
