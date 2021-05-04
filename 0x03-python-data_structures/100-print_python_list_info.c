@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <python3.8/Python.h>
+#include <Python.h>
 
 /**
  * print_item_info - Print the information of items of a python list
