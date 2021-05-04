@@ -26,7 +26,7 @@ int _ListLen(listint_t *head)
 int is_palindrome(listint_t **head)
 {
 	listint_t *current;
-	int i = 0, j, *array, limit, listlen;
+	int i = 0, j, *array, listlen;
 
 	if (*head == NULL || head == NULL)
 		return (1);
