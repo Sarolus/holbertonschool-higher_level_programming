@@ -21,21 +21,23 @@ void print_item_info(PyObject *item, int itemIndex)
  */
 void print_python_list_info(PyObject *p)
 {
-	int itemIndex, allocObjNb = 0;
-	Py_ssize_t objListsize = 0;
+	int itemIndex, objAllocatedNb = 0;
 	PyObject *item;
+	Py_ssize_t objListSize = 0;
 
+	/* Check if item list is not empty */
 	if (PyList_Check(p))
 	{
-		objListsize = PyList_Size(p);
-		allocObjNb = ((PyListObject *)p)->allocated;
+		objListSize = PyList_Size(p);
+		objAllocatedNb = ((PyListObject *)p)->allocated;
 
-		printf("[*] Size of the Python list = %d\n", (int)objListsize);
-		printf("[*] Allocated = %d\n", allocObjNb);
-		for (itemIndex = 0; itemIndex < objListsize; itemIndex++)
+		printf("[*] Size of the Python List = %d\n", (int)objListSize);
+		printf("[*] Allocated = %d\n", objAllocatedNb);
+
+		for (itemIndex = 0; itemIndex < objListSize; itemIndex++)
 		{
 			item = PyList_GetItem(p, itemIndex);
-			printf("Element %d: %s\n", itemIndex, Py_TYPE(item)->tp_name);
+			print_item_info(item, itemIndex);
 		}
 	}
 }
