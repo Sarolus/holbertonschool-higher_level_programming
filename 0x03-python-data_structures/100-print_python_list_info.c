@@ -35,7 +35,7 @@ void print_python_list_info(PyObject *p)
 		for (itemIndex = 0; itemIndex < objListsize; itemIndex++)
 		{
 			Item = PyList_GetItem(p, itemIndex);
-			print_item_info(Item, itemIndex);
+			printf("Element %d: %s\n", itemIndex, Py_TYPE(Item)->tp_name);
 		}
 	}
 }
