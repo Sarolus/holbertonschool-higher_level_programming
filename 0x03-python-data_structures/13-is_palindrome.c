@@ -42,7 +42,7 @@ int is_palindrome(listint_t **head)
 		i++;
 	}
 
-	for (j = 0; j < 1 / 2; j++)
+	for (j = 0; j < i / 2; j++)
 	{
 		if (array[j] != array[i - 1 - j])
 		{
