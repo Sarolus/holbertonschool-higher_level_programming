@@ -79,12 +79,12 @@ class Square():
         Args:
             prmValue (tuple): Value of the position of a square
         """
-        if not isinstance(prmValue, tuple) and len(prmValue) == 2 and \
-                type(prmValue[0]) is int and type(prmValue[1]) is int and \
+        if isinstance(prmValue, tuple) and len(prmValue) == 2 and \
+                isinstance(prmValue[0], int) and isinstance(prmValue[1], int) and \
                 prmValue[0] >= 0 and prmValue[1] >= 0:
-            raise TypeError("position must be a tuple of 2 positive integers")
-        else:
             self.__position = prmValue
+        else:
+            raise TypeError("position must be a tuple of 2 positive integers")
 
     def my_print(self):
         """
