@@ -33,7 +33,7 @@ class Square():
 
         Returns the area of a square
         """
-        return self.__size ** 2
+        return self.__size * self.__size
 
     @property
     def size(self):
