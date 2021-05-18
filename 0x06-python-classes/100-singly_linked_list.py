@@ -122,6 +122,8 @@ class SinglyLinkedList():
         Returns a string containing all the singly linked list.
         """
         node = self.head
+        if node is None:
+            return ("")
         while node and node.next_node is not None:
             print(node.data)
             node = node.next_node
