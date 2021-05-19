@@ -10,7 +10,7 @@ This class was retrieved from Bytecodes for the task 10 of project
 import math
 
 
-class MagicCLass:
+class MagicClass:
     """
     This class defines a circle of radius self.__radius
     """
