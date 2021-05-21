@@ -1,0 +1,53 @@
+######################
+## 2-matrix_divided ##
+######################
+
+Verify import:
+-------------
+>>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+___________________________________________________________
+Verify matrix value are int:
+---------------------------
+>>> matrix_divided([[1, 2, 3], [4, 5, 6]], 3)
+[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+___________________________________________________________
+Verify matrix value are float:
+-----------------------------
+>>> matrix_divided([[1, 2, 3], [4, 5, 6]], 3.0)
+[[0.33, 0.67, 1.0], [1.33, 1.67, 2.0]]
+
+___________________________________________________________
+Verify divider if not int:
+-------------------------
+>>> matrix_divided([[1, 2, 3], [4, 5, 6]], 'a')
+Traceback (most recent call last):
+    ...
+TypeError: div must be a number
+
+___________________________________________________________
+Verify if divider is 0:
+----------------------
+>>> matrix_divided([[1, 2, 3], [4, 5, 6]], 0)
+Traceback (most recent call last):
+    ...
+ZeroDivisionError: division by zero
+
+___________________________________________________________
+Verify matrix row size:
+----------------------
+>>> matrix_divided([[1, 2, 3], [4, 5]], 3)
+Traceback (most recent call last):
+    ...
+TypeError: Each row of the matrix must have the same size
+
+___________________________________________________________
+Verify if matrix isn't full of integers or float:
+------------------------------------------------
+>>> matrix_divided([[1, 2, 3], ['a', 'b', 'c']], 3)
+Traceback (most recent call last):
+    ...
+TypeError: matrix must be a matrix (list of lists) of integers/floats
+
+___________________________________________________________
