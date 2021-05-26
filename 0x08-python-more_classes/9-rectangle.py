@@ -15,6 +15,13 @@ class Rectangle():
     number_of_instances = 0
     print_symbol = "#"
 
+    @classmethod
+    def square(cls, size=0):
+        """
+        Square class method
+        """
+        return cls(size, size)
+
     def __init__(self, width=0, height=0):
         """
         __init__ method
@@ -22,8 +29,8 @@ class Rectangle():
             width (int): width of a rectangle
             height (int): height of a rectangle
         """
-        self.__height = height
         self.__width = width
+        self.__height = height
         Rectangle.number_of_instances += 1
 
     @property
@@ -133,10 +140,3 @@ class Rectangle():
             return rect_2
         else:
             return rect_1
-
-    @classmethod
-    def square(cls, size=0):
-        """
-        Square class method
-        """
-        return cls(size, size)
