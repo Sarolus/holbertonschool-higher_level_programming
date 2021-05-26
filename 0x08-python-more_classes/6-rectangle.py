@@ -95,9 +95,9 @@ class Rectangle():
         string = ""
         if self.__width == 0 or self.__height == 0:
             string += "\n"
-
-        for char in range(self.__height):
-            string += '#' * self.__width + "\n"
+        else:
+            for char in range(self.__height):
+                string += '#' * self.__width + "\n"
 
         return string[:-1]
 
