@@ -10,8 +10,8 @@ it's perimeter.
 
 class Rectangle():
     """Rectangle class"""
-    __width = 0
     __height = 0
+    __width = 0
     number_of_instances = 0
     print_symbol = "#"
 
@@ -29,8 +29,8 @@ class Rectangle():
             width (int): width of a rectangle
             height (int): height of a rectangle
         """
-        self.__width = width
         self.__height = height
+        self.__width = width
         Rectangle.number_of_instances += 1
 
     @property
