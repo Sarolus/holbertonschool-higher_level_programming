@@ -139,4 +139,4 @@ class Rectangle():
         """
         Square class method
         """
-        return Rectangle(size, size)
+        return cls(size, size)
