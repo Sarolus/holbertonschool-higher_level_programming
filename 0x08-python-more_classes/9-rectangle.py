@@ -10,17 +10,10 @@ it's perimeter.
 
 class Rectangle():
     """Rectangle class"""
-    __height = 0
-    __width = 0
+    __height = None
+    __width = None
     number_of_instances = 0
     print_symbol = "#"
-
-    @classmethod
-    def square(cls, size=0):
-        """
-        Square class method
-        """
-        return cls(size, size)
 
     def __init__(self, width=0, height=0):
         """
@@ -140,3 +133,10 @@ class Rectangle():
             return rect_2
         else:
             return rect_1
+
+    @classmethod
+    def square(cls, size=0):
+        """
+        Square class method
+        """
+        return cls(size, size)
