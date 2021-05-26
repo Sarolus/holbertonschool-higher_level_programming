@@ -34,29 +34,6 @@ class Rectangle():
         Rectangle.number_of_instances += 1
 
     @property
-    def width(self):
-        """
-        width property method
-
-        Return the width of a rectangle
-        """
-        return self.__width
-
-    @width.setter
-    def width(self, prmValue):
-        """
-        width setter method
-
-        Args:
-            prmValue (int): value of width
-        """
-        if not isinstance(prmValue, int):
-            raise TypeError("width must be an integer")
-        if prmValue < 0:
-            raise ValueError("width must be >= 0")
-        self.__width = prmValue
-
-    @property
     def height(self):
         """
         height property method
@@ -78,6 +55,29 @@ class Rectangle():
         if prmValue < 0:
             raise ValueError("height must be >= 0")
         self.__height = prmValue
+
+    @property
+    def width(self):
+        """
+        width property method
+
+        Return the width of a rectangle
+        """
+        return self.__width
+
+    @width.setter
+    def width(self, prmValue):
+        """
+        width setter method
+
+        Args:
+            prmValue (int): value of width
+        """
+        if not isinstance(prmValue, int):
+            raise TypeError("width must be an integer")
+        if prmValue < 0:
+            raise ValueError("width must be >= 0")
+        self.__width = prmValue
 
     def area(self):
         """
