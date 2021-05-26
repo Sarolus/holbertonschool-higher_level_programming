@@ -108,7 +108,7 @@ class Rectangle():
         Returns an "official" string representation
         of the instance
         """
-        return "Rectangle("+str(self.__width)+","+str(self.__height)+")"
+        return "Rectangle("+str(self.__width)+", "+str(self.__height)+")"
 
     def __del__(str):
         """
