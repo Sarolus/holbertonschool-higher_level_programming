@@ -1,1 +1,56 @@
-INCOMING
+###############
+## 1-my_list ##
+###############
+
+Verify import:
+-------------
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+_________________________________________________________
+Verify type:
+-----------
+>>> bg = BaseGeometry()
+>>> type(bg)
+<class '7-base_geometry.BaseGeometry'>
+
+_________________________________________________________
+Verify error when using integer_validator without arguments:
+-----------------------------------------------------------
+>>> bg.integer_validator()
+Traceback (most recent call last):
+...
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+
+_________________________________________________________
+Verify error when using integer_validator when wrong type arguments:
+-------------------------------------------------------------------
+>>> bg.integer_validator("Zen", "Python")
+Traceback (most recent call last):
+...
+TypeError: Zen must be an integer
+
+_________________________________________________________
+Verify error when using integer_validator when equal to 0:
+---------------------------------------------------------
+>>> bg.integer_validator("Zen", 0)
+Traceback (most recent call last):
+...
+ValueError: Zen must be greater than 0
+
+_________________________________________________________
+Verify error when using integer_validator when less than 0:
+----------------------------------------------------------
+>>> bg.integer_validator("Zen", -2)
+Traceback (most recent call last):
+...
+ValueError: Zen must be greater than 0
+
+_________________________________________________________
+Verify area calculation:
+-----------------------
+>>> bg.area()
+Traceback (most recent call last):
+...
+Exception: area() is not implemented
+
+_________________________________________________________
