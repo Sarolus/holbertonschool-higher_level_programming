@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+    Module containing the inherits_from function
+"""
+
+
 def inherits_from(obj, a_class):
     """
         Return True if the object is an instance of
