@@ -63,3 +63,11 @@ Print while there's negative values in my_list:
 [1, -4, 2, -5, -2]
 
 _________________________________________________________
+Wrong print_sorted usage:
+------------------------
+
+>>> my_list = MyList()
+>>> my_list.print_sorted([1, 2, 3, 4])
+Traceback (most recent call last):
+...
+TypeError: print_sorted() takes 1 positional argument but 2 were given
