@@ -23,6 +23,8 @@ class Base_tests(unittest.TestCase):
                 is given.
                 # When a negative int argument
                 is given.
+                # When a string argument is
+                given.
         """
         b1 = Base()
         self.assertEqual(1, b1.id)
