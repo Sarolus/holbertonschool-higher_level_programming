@@ -41,5 +41,5 @@ class Square(Rectangle):
             Set a string representation of a
             square values.
         """
-        return "[Square] ({}) {}/{} - {}".format(self.id, self.__x,
-                                                 self.__y, self.__size)
+        return "[Square] ({}) {}/{} - {}".format(self.id, self.x,
+                                                 self.y, self.width)
