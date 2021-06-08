@@ -89,3 +89,26 @@ class Rectangle_tests(unittest.TestCase):
         output = "[Rectangle] (64) 32/16 - 8/4"
         r1 = Rectangle(8, 4, 32, 16, 64)
         self.assertEqual(output, r1.__str__())
+
+    def test_update(self):
+        """
+            Test different uses of the update
+            function of the rectangle instance.
+        """
+        """Test using simple arguments"""
+        r1 = Rectangle(32, 4, 2, 16, 8)
+        r1.update(64, 8, 4, 32, 16)
+        self.assertEqual(64, r1.id)
+        self.assertEqual(8, r1.width)
+        self.assertEqual(4, r1.height)
+        self.assertEqual(32, r1.x)
+        self.assertEqual(16, r1.y)
+
+        """Test using key and value arguments"""
+        r2 = Rectangle(32, 4, 2, 16, 8)
+        r2.update(id=64, width=8, height=4, x=32, y=16)
+        self.assertEqual(64, r2.id)
+        self.assertEqual(8, r2.width)
+        self.assertEqual(4, r2.height)
+        self.assertEqual(32, r2.x)
+        self.assertEqual(16, r2.y)
