@@ -26,15 +26,16 @@ class Square(Rectangle):
         """
             Getter Method of Size
         """
-        return self.__size
+        return self.width
 
     @size.setter
     def size(self, value):
         """
             Setter Method of Size
         """
-        self.attribute_validator("size", value)
-        self.__size = value
+        self.attribute_validator("wdith", value)
+        self.width = value
+        self.height = value
 
     def __str__(self):
         """
