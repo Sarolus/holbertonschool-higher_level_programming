@@ -55,3 +55,30 @@ class Rectangle_tests(unittest.TestCase):
             r4 = Rectangle(8, 4, -32, 16, 64)
         with self.assertRaises(ValueError):
             r4 = Rectangle(-8, 4, 32, -16, 64)
+
+    def test_area_uses(self):
+        """
+            Test cases of the use of the area
+            calculating function.
+        """
+        r1 = Rectangle(8, 4)
+        self.assertEqual(32, r1.area())
+
+        r2 = Rectangle(2, 10)
+        self.assertEqual(20, r2.area())
+
+        r3 = Rectangle(8, 7, 0, 0, 12)
+        self.assertEqual(56, r3.area())
+
+        r4 = Rectangle(8, 4, 32, 16, 64)
+        self.assertEqual(32, r4.area())
+
+    def test_rectangle_displaying(self):
+        """
+            Test displaying different 
+            rectangle instances.
+        """
+        
+        """Dunno for know"""
+
+    

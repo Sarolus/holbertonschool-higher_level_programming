@@ -96,3 +96,18 @@ class Rectangle(Base):
                 raise ValueError("{} must be > 0".format(name))
         elif value < 0:
             raise ValueError("{} must be >= 0".format(name))
+
+    def area(self):
+        """
+            Calculate the area of the rectangle instance.
+        """
+        return self.__width * self.__height
+
+    def display(self):
+        """
+            Prints in stdout the Rectangle instance using
+            the character #.
+        """
+        print("\n" * self.__y, end="")
+        for x in range(self.__height):
+            print("#" * self.width, end="\n")
