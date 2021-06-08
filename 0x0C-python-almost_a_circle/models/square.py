@@ -33,7 +33,7 @@ class Square(Rectangle):
         """
             Setter Method of Size
         """
-        self.attribute_validator("wdith", value)
+        self.attribute_validator("width", value)
         self.width = value
         self.height = value
 
