@@ -81,4 +81,11 @@ class Rectangle_tests(unittest.TestCase):
         
         """Dunno for know"""
 
-    
+    def test_rectangle_str_method(self):
+        """
+            Test printing rectangle values
+            using the __str__ method
+        """
+        output = "[Rectangle] (64) 32/16 - 8/4"
+        r1 = Rectangle(8, 4, 32, 16, 64)
+        self.assertEqual(output, r1.__str__())

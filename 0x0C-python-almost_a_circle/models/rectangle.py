@@ -110,4 +110,13 @@ class Rectangle(Base):
         """
         print("\n" * self.__y, end="")
         for x in range(self.__height):
-            print("#" * self.width, end="\n")
+            print(" " * self.__x + "#" * self.__width, end="\n")
+
+    def __str__(self):
+        """
+            Set a string representation of a
+            rectangle values.
+        """
+        return "[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.__x,
+                                                       self.__y, self.__width,
+                                                       self.height)
