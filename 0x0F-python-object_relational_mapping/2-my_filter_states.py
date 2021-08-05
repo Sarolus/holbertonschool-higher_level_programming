@@ -29,7 +29,7 @@ def main(mysql_user, mysql_password, mysql_db, state_name):
     cursor = database.cursor()
 
     cursor.execute(
-        "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC".format(
+        "SELECT * FROM states WHERE BINARY name = '{}' ORDER BY id ASC".format(
             state_name
             )
         )
