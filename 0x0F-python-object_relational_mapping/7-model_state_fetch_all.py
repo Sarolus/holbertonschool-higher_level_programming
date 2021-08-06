@@ -25,7 +25,7 @@ def main(mysql_user, mysql_password, mysql_db):
     Session = sessionmaker(bind=engine)
     session = Session()
 
-    query = session.query(State)
+    query = session.query(State).order_by(State.id)
 
     for state in query.all():
         print("{}: {}".format(state.id, state.name))
