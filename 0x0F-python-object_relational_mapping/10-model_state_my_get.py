@@ -19,6 +19,7 @@ def main(mysql_user, mysql_password, mysql_db, state_name):
         mysql_user: MySQL username.
         mysql_password: MySQL password.
         mysql_db: MySQL Database name.
+        state_name: State name searched.
     """
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
         mysql_user, mysql_password, mysql_db), pool_pre_ping=True
