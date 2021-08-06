@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-    Script that lists all State objects from the database hbtn_0e_6_usa
+    Script that prints the State object with the name passed
+    as argument from the database hbtn_0e_6_usa
 """
 
 import sys
@@ -11,7 +12,8 @@ from sqlalchemy.orm import sessionmaker
 
 def main(mysql_user, mysql_password, mysql_db, state_name):
     """
-    Script that lists all State objects from the database hbtn_0e_6_usa
+    Script that prints the State object with the name passed
+    as argument from the database hbtn_0e_6_usa
 
     Args:
         mysql_user: MySQL username.
