@@ -32,6 +32,8 @@ def main(mysql_user, mysql_password, mysql_db):
     else:
         state = query.first()
         print("{}: {}".format(state.id, state.name))
+    
+    session.close()
 
 if __name__ == "__main__":
     main(sys.argv[1], sys.argv[2], sys.argv[3])
