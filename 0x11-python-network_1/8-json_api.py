@@ -12,19 +12,19 @@ from sys import argv
 if __name__ == "__main__":
 
     try:
-        parameter = argv[1]
+        argument = argv[1]
     except:
-        parameter = ""
+        argument = ""
 
     url = "http://0.0.0.0:5000/search_user"
-    value = {'q': parameter}
+    value = {'q': argument}
     response = requests.post(url=url, data=value)
 
     try:
         content = response.json()
-        if "id" in json:
-            print("[{}] {}".format(content.get("id"), content.get("name")))
+        if 'id' in content:
+            print("[{}] {}".format(content['id'], content['name']))
         else:
             print("No result")
-    except Exception:
+    except ValueError:
         print("Not a valid JSON")
