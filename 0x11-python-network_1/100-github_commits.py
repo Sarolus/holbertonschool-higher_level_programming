@@ -19,7 +19,7 @@ if __name__ == "__main__":
     response = requests.get(url)
     content = response.json()
 
-    for commit in content:
+    for commit in content[0:10]:
         print(
             "{}: {}".format(
                 commit.get("sha"),
